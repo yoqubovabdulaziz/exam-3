@@ -22,14 +22,13 @@ for (let i = 0; i < btn2.length; i++) {
 
 let toggle = document.querySelector(".nav__toggle");
 let menu = document.querySelector(".katalog");
-let main = document.getElementById("main");
 let isOpen = false;
 
 toggle.addEventListener("click", () => {
   isOpen = !isOpen;
   if (isOpen) {
-    menu.style.opacity = "1";
+    menu.style.display = "flex";
   } else {
-    menu.style.opacity = "0";
+    menu.style.display = "none";
   }
 });

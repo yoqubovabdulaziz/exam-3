@@ -355,7 +355,7 @@ header .nav__items__basket span {
   gap: 12px;
   border-radius: 4px;
   background-color: #f63;
-  opacity: 0;
+  display: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }

@@ -230,7 +230,7 @@ header {
   gap: 12px;
   border-radius: 4px;
   background-color: var.$primary-color;
-  opacity: 0;
+  display: none;
   transition: 0.5s;
   a {
     color: var.$white-color;
