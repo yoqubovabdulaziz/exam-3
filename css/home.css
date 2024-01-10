@@ -118,6 +118,7 @@ header .nav__row__items h6 {
   line-height: 150%;
 }
 header .nav__toggle {
+  overflow: hidden;
   position: relative;
   padding: 8px;
   display: -webkit-box;
@@ -340,7 +341,7 @@ header .nav__items__basket span {
 }
 
 .katalog {
-  width: 200px;
+  width: 823px;
   top: 40px;
   left: 0;
   position: absolute;
@@ -348,16 +349,12 @@ header .nav__items__basket span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   border-radius: 4px;
   background-color: #f63;
-  display: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  opacity: 0;
 }
 .katalog a {
   color: #fff;

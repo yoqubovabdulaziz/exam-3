@@ -27,8 +27,10 @@ let isOpen = false;
 toggle.addEventListener("click", () => {
   isOpen = !isOpen;
   if (isOpen) {
-    menu.style.display = "flex";
+    toggle.style.overflow = "visible";
+    menu.style.opacity = "1";
   } else {
-    menu.style.display = "none";
+    toggle.style.overflow = "hidden";
+    menu.style.opacity = "0";
   }
 });

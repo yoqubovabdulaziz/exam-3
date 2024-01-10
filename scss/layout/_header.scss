@@ -58,6 +58,7 @@ header {
       }
     }
     &__toggle {
+      overflow: hidden;
       position: relative;
       padding: 8px;
       display: flex;
@@ -220,18 +221,19 @@ header {
 }
 
 .katalog {
-  width: 200px;
+  // width: 200px;
+  width: 823px;
   top: 40px;
   left: 0;
   position: absolute;
   padding: 30px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  // flex-direction: column;
+  gap: 20px;
   border-radius: 4px;
   background-color: var.$primary-color;
-  display: none;
   transition: 0.5s;
+  opacity: 0;
   a {
     color: var.$white-color;
   }
