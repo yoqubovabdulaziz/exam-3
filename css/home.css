@@ -118,6 +118,7 @@ header .nav__row__items h6 {
   line-height: 150%;
 }
 header .nav__toggle {
+  position: relative;
   padding: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -313,6 +314,56 @@ header .nav__items__basket span {
   font-weight: 400;
   line-height: 150%;
   gap: 4px;
+}
+#header__bottom .nav__bottom__row .basket__zero {
+  position: relative;
+}
+#header__bottom .nav__bottom__row span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  font-size: 8px;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #f63;
+}
+
+.katalog {
+  width: 200px;
+  top: 40px;
+  left: 0;
+  position: absolute;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  border-radius: 4px;
+  background-color: #f63;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.katalog a {
+  color: #fff;
+}
+.katalog a:hover {
+  color: #000;
 }
 
 footer {
