@@ -37,8 +37,8 @@ toggle.addEventListener("click", () => {
 
 // HEADER BOTTOM KATALOG
 
-const katalogBottom = document.querySelector(".katalog__bottom");
-const toggleBottom = document.querySelector(".toggle__bottom");
+const katalogBottom = document.querySelectorAll(".katalog__bottom");
+const toggleBottom = document.querySelectorAll(".toggle__bottom");
 
 toggleBottom.addEventListener("click", () => {
   isOpen = !isOpen;
