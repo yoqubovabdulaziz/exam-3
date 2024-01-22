@@ -39,6 +39,7 @@ toggle.addEventListener("click", () => {
 
 const katalogBottom = document.getElementById("katalog__bottom");
 const toggleBottom = document.getElementById("toggle__bottom");
+const main = document.getElementById("main");
 
 toggleBottom.addEventListener("click", () => {
   isOpen = !isOpen;
@@ -47,4 +48,8 @@ toggleBottom.addEventListener("click", () => {
   } else {
     katalogBottom.style.bottom = "-200px";
   }
+});
+
+main.addEventListener("click", () => {
+  katalogBottom.style.bottom = "-200px";
 });
