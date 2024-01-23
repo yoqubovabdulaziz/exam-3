@@ -20,18 +20,18 @@ for (let i = 0; i < btn2.length; i++) {
   });
 }
 
+// HEADER KATALOG
+
 let toggle = document.querySelector(".nav__toggle");
-let menu = document.querySelector(".katalog");
+let menu = document.querySelector("#katalog");
 let isOpen = false;
 
 toggle.addEventListener("click", () => {
   isOpen = !isOpen;
   if (isOpen) {
-    toggle.style.overflow = "visible";
-    menu.style.opacity = "1";
+    menu.style.top = "70px";
   } else {
-    toggle.style.overflow = "hidden";
-    menu.style.opacity = "0";
+    menu.style.top = "-200px";
   }
 });
 
@@ -52,4 +52,5 @@ toggleBottom.addEventListener("click", () => {
 
 main.addEventListener("click", () => {
   katalogBottom.style.bottom = "-200px";
+  menu.style.top = "-200px";
 });
