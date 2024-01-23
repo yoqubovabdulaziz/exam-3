@@ -128,6 +128,7 @@ header .nav__toggle {
           align-items: center;
   background-color: #70c05b;
   border-radius: 4px;
+  cursor: pointer;
 }
 @media (max-width: 700px) {
   header .nav__toggle {
@@ -138,10 +139,32 @@ header .nav__toggle button {
   padding: 8px 0 8px 8px;
   border-radius: 4px;
   background-color: transparent;
+  position: relative;
+}
+header .nav__toggle button span {
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  border-radius: 4px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+header .nav__toggle button .hamburger-top {
+  top: 0;
+}
+header .nav__toggle button .hamburger-center {
+  top: 40%;
+  bottom: 25%;
+}
+header .nav__toggle button .hamburger-bottom {
+  bottom: 1.2px;
 }
 header .nav__toggle a {
   width: 92px;
   height: 44px;
+  margin-left: 25px;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,27 +691,6 @@ footer {
 .promo__card__img {
   position: relative;
 }
-.promo__card__img #card__heart,
-.promo__card__img #card__heart-1,
-.promo__card__img #card__heart-2,
-.promo__card__img #card__heart-3,
-.promo__card__img #card__heart-4,
-.promo__card__img #card__heart-5,
-.promo__card__img #card__heart-6,
-.promo__card__img #card__heart-7,
-.promo__card__img #card__heart-8,
-.promo__card__img #card__heart-9,
-.promo__card__img #card__heart-10,
-.promo__card__img #card__heart-11 {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  fill: black;
-  padding: 8px;
-  border-radius: 4px;
-  opacity: 0.5;
-  background: var(--Grayscale-Lightest, #f3f2f1);
-}
 .promo__card__img span {
   position: absolute;
   left: 13px;
@@ -760,18 +762,18 @@ footer {
   border-color: #f63;
 }
 
-#hearted,
-#hearted-1,
-#hearted-2,
-#hearted-3,
-#hearted-4,
-#hearted-5,
-#hearted-6,
-#hearted-7,
-#hearted-8,
-#hearted-9,
-#hearted-10,
-#hearted-11 {
+.card__heart {
+  display: inline;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.5;
+  background: var(--Grayscale-Lightest, #f3f2f1);
+}
+
+.hearted {
   display: none;
   position: absolute;
   right: 8px;
