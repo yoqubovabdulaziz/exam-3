@@ -1,10 +1,14 @@
 let count = 0;
 const btn = document.querySelectorAll(".basket__btn");
 const span = document.querySelector(".plus");
+if (count == 0) {
+  span.style.display = "none";
+}
 
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
     count++;
+    span.style.display = "inline-block";
     span.innerHTML = count;
   });
 }
@@ -37,13 +41,13 @@ toggle.addEventListener("click", () => {
     top: 6px;
     transform: rotate(140deg);
     width: 20px;
-    background-color: red;
+    background-color: #f63;
     `;
     hamburgerBottom.style = `
     top: 6px;
     transform: rotate(-140deg);
     width: 20px;
-    background-color: red;
+    background-color: #f64;
     `;
     hamburgerCenter.style.opacity = "0";
   } else {
@@ -83,5 +87,44 @@ toggleBottom.addEventListener("click", () => {
 main.addEventListener("click", () => {
   katalogBottom.style.bottom = "-200px";
   menu.style.top = "-200px";
+  hamburgerTop.style = `
+    top: 0px;
+    transform: rotate(0);
+    width: 25px;
+    `;
+  hamburgerBottom.style = `
+    bottom: 1.2px;
+    transform: rotate(0);
+    width: 25px;
+    `;
+  hamburgerCenter.style = `
+    opacity: 1;
+    transition: 0.5s;
+    `;
 });
 
+// Plus Minus
+
+let countProduct = 0;
+const plusMinus = document.querySelector(".card__plus-minus");
+const productCount = document.querySelector(".product__count");
+const productbtn = document.querySelector(".basket__btn");
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+
+productbtn.addEventListener("click", function () {
+  plusMinus.style.display = "flex";
+  this.style.display = "none";
+  countProduct++;
+  productCount.innerHTML = countProduct;
+});
+
+plus.addEventListener("click", function () {
+  countProduct++;
+  productCount.innerHTML = countProduct;
+});
+
+minus.addEventListener("click", function () {
+  countProduct--;
+  productCount.innerHTML = countProduct;
+});

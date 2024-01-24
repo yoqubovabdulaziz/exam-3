@@ -134,8 +134,17 @@
       line-height: 150%;
       margin-bottom: 8px;
     }
+    .rating {
+      .stars {
+        color: #bfbfbf;
+      }
+      .stars.active {
+        color: var.$primary-color;
+        color: black;
+      }
+    }
     &__btn {
-      button {
+      .basket__btn {
         margin-top: 8px;
         width: 100%;
         padding: 8px;
@@ -148,10 +157,30 @@
         border-radius: 4px;
         background-color: transparent;
       }
-      button:hover {
+      .basket__btn:hover {
         background-color: var.$primary-color;
         color: var.$white-color;
         border-color: var.$primary-color;
+      }
+      .card__plus-minus {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ddd;
+        border-radius: 4px;
+        margin-top: 8px;
+        .product__count {
+          color: black;
+          font-size: 20px;
+        }
+        .minus,
+        .plus {
+          padding: 3px 40px;
+          background-color: var.$primary-color;
+          border-radius: 4px;
+          font-size: 30px;
+          color: white;
+        }
       }
     }
   }
