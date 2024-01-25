@@ -174,12 +174,17 @@
           font-size: 20px;
         }
         .minus,
-        .plus {
+        .pluses {
           padding: 3px 40px;
           background-color: var.$primary-color;
           border-radius: 4px;
           font-size: 30px;
           color: white;
+          transition: 0.3s;
+        }
+        .minus:hover,
+        .pluses:hover {
+          background-color: #f30;
         }
       }
     }

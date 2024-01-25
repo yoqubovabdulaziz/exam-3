@@ -8,7 +8,7 @@ if (count == 0) {
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", () => {
     count++;
-    span.style.display = "inline-block";
+    span.style.display = "flex";
     span.innerHTML = count;
   });
 }
@@ -103,28 +103,3 @@ main.addEventListener("click", () => {
     `;
 });
 
-// Plus Minus
-
-let countProduct = 0;
-const plusMinus = document.querySelector(".card__plus-minus");
-const productCount = document.querySelector(".product__count");
-const productbtn = document.querySelector(".basket__btn");
-const plus = document.querySelector(".plus");
-const minus = document.querySelector(".minus");
-
-productbtn.addEventListener("click", function () {
-  plusMinus.style.display = "flex";
-  this.style.display = "none";
-  countProduct++;
-  productCount.innerHTML = countProduct;
-});
-
-plus.addEventListener("click", function () {
-  countProduct++;
-  productCount.innerHTML = countProduct;
-});
-
-minus.addEventListener("click", function () {
-  countProduct--;
-  productCount.innerHTML = countProduct;
-});

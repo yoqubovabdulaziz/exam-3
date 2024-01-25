@@ -786,12 +786,18 @@ footer {
   font-size: 20px;
 }
 .promo__card__btn .card__plus-minus .minus,
-.promo__card__btn .card__plus-minus .plus {
+.promo__card__btn .card__plus-minus .pluses {
   padding: 3px 40px;
   background-color: #f63;
   border-radius: 4px;
   font-size: 30px;
   color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.promo__card__btn .card__plus-minus .minus:hover,
+.promo__card__btn .card__plus-minus .pluses:hover {
+  background-color: #f30;
 }
 
 .card__heart {
