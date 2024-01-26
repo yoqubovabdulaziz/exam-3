@@ -103,3 +103,12 @@ main.addEventListener("click", () => {
     `;
 });
 
+// header catalog mapping
+
+const catalotUl = document.createElement("ul");
+const catalotLi = document.createElement("li");
+const catalotA = document.createElement("a");
+
+for (let i = 1; i < 4; i++) {
+  
+}
