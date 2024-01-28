@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
       rel="stylesheet"
     />
@@ -11,28 +18,32 @@
     <title>Categories</title>
   </head>
   <body>
-    <div class="katalog">
-      <ul>
-        <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
-        <li><a href="pages/categories.html">Хлеб</a></li>
-        <li><a href="pages/categories.html">Фрукты и овощи</a></li>
-        <li><a href="pages/categories.html">Замороженные продукты</a></li>
-      </ul>
-      <ul>
-        <li><a href="pages/categories.html">Напитки</a></li>
-        <li><a href="pages/categories.html">Кондитерские изделия</a></li>
-        <li><a href="pages/categories.html">Чай, кофе</a></li>
-      </ul>
-      <ul>
-        <li><a href="pages/categories.html">Бакалея</a></li>
-        <li><a href="pages/categories.html">Здоровое питание</a></li>
-        <li><a href="pages/categories.html">Зоотовары</a></li>
-      </ul>
-      <ul>
-        <li><a href="pages/categories.html">Непродовольственные товары</a></li>
-        <li><a href="pages/categories.html">Детское питание</a></li>
-        <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
-      </ul>
+    <div id="katalog">
+      <div class="katalog__menu container__1250">
+        <ul>
+          <li><a href="pages/categories.html">Молоко, сыр, яйцо</a></li>
+          <li><a href="pages/categories.html">Хлеб</a></li>
+          <li><a href="pages/categories.html">Фрукты и овощи</a></li>
+          <li><a href="pages/categories.html">Замороженные продукты</a></li>
+        </ul>
+        <ul>
+          <li><a href="pages/categories.html">Напитки</a></li>
+          <li><a href="pages/categories.html">Кондитерские изделия</a></li>
+          <li><a href="pages/categories.html">Чай, кофе</a></li>
+        </ul>
+        <ul>
+          <li><a href="pages/categories.html">Бакалея</a></li>
+          <li><a href="pages/categories.html">Здоровое питание</a></li>
+          <li><a href="pages/categories.html">Зоотовары</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="pages/categories.html">Непродовольственные товары</a>
+          </li>
+          <li><a href="pages/categories.html">Детское питание</a></li>
+          <li><a href="pages/categories.html">Мясо, птица, колбаса</a></li>
+        </ul>
+      </div>
     </div>
     <header>
       <nav class="nav container__1250">
@@ -47,14 +58,25 @@
         <div class="nav__row">
           <div class="nav__toggle">
             <button>
-              <img src="../assets/images/menu.svg" alt="" />
+              <span class="hamburger-top"></span>
+              <span class="hamburger-center"></span>
+              <span class="hamburger-bottom"></span>
             </button>
-            <a href="categories.html">Каталог</a>
+            <a href="pages/categories.html">Каталог</a>
           </div>
           <form>
             <div class="nav__search">
-              <input type="text" placeholder="Найти товар" />
-              <img src="../assets/images/search.svg" alt="" />
+              <input
+                class="search__input"
+                type="text"
+                placeholder="Найти товар"
+              />
+              <img
+                class="search__icon"
+                src="../assets/images/search.svg"
+                alt=""
+              />
+              <div class="searching__content"></div>
             </div>
           </form>
           <ul class="nav__row__items">
@@ -133,87 +155,15 @@
     <main id="main">
       <section id="hero">
         <div class="container__1250 hero">
-          <h1 class="hero__title">Каталог</h1>
-          <div class="hero__row">
-            <div class="hero__item item1">
-              <img src="../assets/images/category-hero1.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Молоко, сыр, яйцо</h4>
-              </div>
-            </div>
-            <div class="hero__item item2">
-              <img src="../assets/images/category-hero2.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Хлеб</h4>
-              </div>
-            </div>
-            <div class="hero__item item3">
-              <img src="../assets/images/category-hero3.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Фрукты и овощи</h4>
-              </div>
-            </div>
-            <div class="hero__item item4">
-              <img src="../assets/images/category-hero4.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Замороженные продукты</h4>
-              </div>
-            </div>
-            <div class="hero__item item5">
-              <img src="../assets/images/category-hero5.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Напитки</h4>
-              </div>
-            </div>
-            <div class="hero__item item6">
-              <img src="../assets/images/category-hero6.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Кондитерские изделия</h4>
-              </div>
-            </div>
-            <div class="hero__item item7">
-              <img src="../assets/images/category-hero7.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Чай, кофе</h4>
-              </div>
-            </div>
-            <div class="hero__item item8">
-              <img src="../assets/images/category-hero8.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Бакалея</h4>
-              </div>
-            </div>
-            <div class="hero__item item9">
-              <img src="../assets/images/category-hero9.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Здоровое питание</h4>
-              </div>
-            </div>
-            <div class="hero__item item10">
-              <img src="../assets/images/category-hero10.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Зоотовары</h4>
-              </div>
-            </div>
-            <div class="hero__item item11">
-              <img src="../assets/images/category-hero11.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Детское питание</h4>
-              </div>
-            </div>
-            <div class="hero__item item12">
-              <img src="../assets/images/category-hero12.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Мясо, птица, колбаса</h4>
-              </div>
-            </div>
-            <div class="hero__item item13">
-              <img src="../assets/images/category-hero13.png" alt="" />
-              <div class="hero__item__effect">
-                <h4>Непродовольственные товары</h4>
-              </div>
-            </div>
+          <div class="line__cramp">
+            <a href="../index.html"
+              >Главная
+              <img src="../assets/images/arrow-right.png" alt="" />
+            </a>
+            <a href="#">Категории</a>
           </div>
+          <h1 class="hero__title">Каталог</h1>
+          <div class="hero__row categories__row"></div>
         </div>
       </section>
     </main>
@@ -262,5 +212,9 @@
       </div>
     </footer>
     <script src="../js/main.js"></script>
+    <script src="../js/categories-data.js"></script>
+    <script src="../js/products-data.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/categories.js"></script>
   </body>
 </html>
