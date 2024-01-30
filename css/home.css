@@ -888,6 +888,31 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.promo__card__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.promo__card__btn .minus,
+.promo__card__btn .pluss {
+  background-color: #70c05b;
+  width: 85px;
+  padding: 4px 0;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 4px;
+}
+.promo__card__btn .product__quantity {
+  font-size: 20px;
+}
 .promo__card__btn .basket__btn {
   margin-top: 8px;
   width: 100%;
@@ -906,11 +931,45 @@ footer {
   color: #fff;
   border-color: #f63;
 }
+.promo__card .plus__minus {
+  margin-top: 16px;
+  background-color: #ddd;
+}
 .promo__card:hover .promo__card__img .product__img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
+.animation__img {
+  display: none;
+  width: 100px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  -webkit-animation: animationImg 1s ease-in-out;
+          animation: animationImg 1s ease-in-out;
+  z-index: 100;
+}
+
+.animation__img__work {
+  display: inline-block;
+}
+
+@-webkit-keyframes animationImg {
+  to {
+    top: -415px;
+    left: 930px;
+    width: 30px;
+  }
+}
+
+@keyframes animationImg {
+  to {
+    top: -415px;
+    left: 930px;
+    width: 30px;
+  }
+}
 #news {
   background-color: #fbf8ec;
 }

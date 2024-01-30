@@ -5,7 +5,7 @@ const pagination = document.querySelector(".pagination__row");
 
 let search = "";
 
-let activePage = 1;
+let activePage = +localStorage.getItem("page") || 1;
 
 function getPromoCard({
   id,
@@ -34,6 +34,7 @@ function getPromoCard({
       return `../assets/images/rating1.svg`;
     }
   }
+  let productInCart = cartProduct.find((pr) => pr.id === id);
   return `
 <div class="promo__card">
   <div class="promo__card__img">
@@ -61,9 +62,17 @@ function getPromoCard({
     <img src=${getRating()}
     alt=${name}
      />
-    <div class="promo__card__btn">
-      <button class="basket__btn">В корзину</button>  
-    </div>
+     ${
+       productInCart
+         ? `<div class = "promo__card__btn plus__minus">
+              <button class="minus" onclick="decreaseQuantity(${id})">-</button>
+              <span class="product__quantity">${productInCart.quantity}</span>
+              <button class="pluss" onclick="increaseQuantity(${id})">+</button>
+            </div>`
+         : `<div class="promo__card__btn">
+              <button onclick="addToCart(${id})" class="basket__btn">В корзину</button>
+            </div>`
+     }
   </div>
 </div>
   `;
@@ -194,14 +203,14 @@ function getPagination() {
 
   allProductsRow.innerHTML = " ";
 
-  let startProduct = (activePage - 1) * LIMIT;
-  let endProduct = activePage * LIMIT;
+  let startProduct = (activePage - 1) * 4;
+  let endProduct = activePage * 4;
 
   products.slice(startProduct, endProduct).map((el) => {
     allProductsRow.innerHTML += getPromoCard(el);
   });
 
-  let pages = Math.ceil(results2.length / LIMIT);
+  let pages = Math.ceil(results2.length / 4);
 
   pagination.innerHTML = `
     <button onclick="getPage('-')" class="pagination__prev">
@@ -240,5 +249,55 @@ function getPage(page) {
   } else {
     activePage = page;
   }
+  localStorage.setItem("page", activePage);
   getPagination();
+}
+
+function addToCart(id) {
+  let productFound = products.find((pr) => pr.id === id);
+  let productInCart = cartProduct.find((pr) => pr.id == id);
+
+  if (productInCart) {
+    cartProduct = cartProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity++;
+      }
+      return pr;
+    });
+  } else {
+    productFound.quantity = 1;
+    cartProduct.push(productFound);
+  }
+  getCartQuantity();
+  getPagination();
+
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+
+function increaseQuantity(id) {
+  cartProduct = cartProduct.map((pr) => {
+    if (pr.id === id) {
+      pr.quantity++;
+    }
+    return pr;
+  });
+  getPagination();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
+}
+
+function decreaseQuantity(id) {
+  let productInCart = cartProduct.find((pr) => pr.id === id);
+  if (productInCart.quantity === 1) {
+    cartProduct = cartProduct.filter((pr) => pr.id !== id);
+  } else {
+    cartProduct = cartProduct.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity--;
+      }
+      return pr;
+    });
+  }
+  getPagination();
+  getCartQuantity();
+  localStorage.setItem("cart", JSON.stringify(cartProduct));
 }

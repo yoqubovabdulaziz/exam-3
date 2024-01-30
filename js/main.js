@@ -79,3 +79,7 @@ toggleBottom.addEventListener("click", () => {
     katalogBottom.style.bottom = "-210px";
   }
 });
+
+// ADD TO CART
+
+

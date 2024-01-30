@@ -1,1 +1,0 @@
-const LIMIT = 8;
